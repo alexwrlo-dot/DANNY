@@ -6,7 +6,7 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-site_url: "https://medico-homeopata-alex.pages.dev" # Tu URL de Cloudflare
+site_url: "https://https://danny-21p.pages.dev" # Tu URL de Cloudflare
 
 collections:
   - name: "blog"
