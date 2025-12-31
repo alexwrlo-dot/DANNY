@@ -1,11 +1,11 @@
 backend:
   name: github
-  repo:alexwrlo-dot/DANNY     
+  repo: alexwrlo-dot/DANNY
   branch: main
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-site_url:  "https://danny-21p.pages.dev"
+site_url: "https://tu-sitio.pages.dev"
 locale: "es"
 
 collections:
