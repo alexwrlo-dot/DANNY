@@ -1,21 +1,28 @@
 backend:
   name: github
-  repo: "alexwrlo-dot/DANNY" # Asegúrate que esto es correcto
+  repo:alexwrlo-dot/DANNY     
   branch: main
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
-site_url: "https://https://danny-21p.pages.dev" # Tu URL de Cloudflare
+site_url:  "https://danny-21p.pages.dev"
+locale: "es"
 
 collections:
   - name: "blog"
-    label: "Artículos"
+    label: "📝 Artículos"
     folder: "blog"
     create: true
+    delete: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    
     fields:
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Imagen Principal", name: "image", widget: "image", required: false}
-      - {label: "Contenido", name: "body", widget: "markdown"}
+      - {label: "Título", name: "title", widget: "string", required: true}
+      - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: false}
+      - {label: "Autor", name: "author", widget: "string", default: "Admin", required: false}
+      - {label: "Imagen Destacada", name: "featured_image", widget: "image", required: false}
+      - {label: "Extracto", name: "excerpt", widget: "text", required: false}
+      - {label: "Contenido", name: "body", widget: "markdown", required: true}
+      - {label: "Etiquetas", name: "tags", widget: "list", required: false}
+
+publish_mode: simple
